@@ -109,3 +109,12 @@ meter {
     margin-right:10px;    
 }
 */
+
+table,th,td {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+.bar {
+    display: flex;
+    column-gap: 50px;
+}
