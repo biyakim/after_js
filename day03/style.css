@@ -1,0 +1,13 @@
+body {
+    color : black;
+}
+a{
+    color : #e90b0b;
+    text-decoration: none;
+    border : 1px solid red;
+
+    width: 300px;
+    height: 200px;
+
+    margin: 50px;
+}
