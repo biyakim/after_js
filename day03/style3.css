@@ -1,0 +1,14 @@
+body {
+    color : black;
+}
+a {
+    color: black;
+    text-decoration: none;
+    border : 1px solid red;
+    display: inline-block;
+    width: 300px;
+    margin:  20px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+}
