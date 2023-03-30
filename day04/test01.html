@@ -12,6 +12,12 @@
 
     <link href="submenu.css" rel="stylesheet">
 
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.js"
+      integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+      crossorigin="anonymous">
+    </script>
+
     <title></title>
 
   </head>
@@ -54,6 +60,13 @@
 
     </ul>
 
+    <p class = "hello">안녕하세요 </p>
+    <p class = "hello">안녕하세요 </p>
+    <p class = "hello">안녕하세요 </p>
+
+    <button id = "test-btn">텍스트 지움</button>
+    <button id = "test-btn2">텍스트 보임</button>
+
     <script>
       // document.querySelector('.list-group')
       // document.querySelectorAll('.list-group')[0]
@@ -63,11 +76,39 @@
       //     //document.getElementsByClassName('list-group')[0].classList.add('show');
       //     document.getElementsByClassName('list-group')[0].classList.toggle('show');
       // })
+
+      // document.querySelector('.hello').innerHTML = '반갑습니다'
+      // $('.hello').html = ('반갑습니다')
+      // $('.hello').css('color','red')
+      // $('.hello').addClass('show')
+
+      // document.querySelectorAll('.hello')[0].innerHTML = '반갑습니다'
+      $('.hello').html('반갑습니다')
       
       document.querySelector('.navbar-toggler').addEventListener('click', function() {
           //document.getElementsByClassName('list-group')[0].classList.add('show');
           document.querySelectorAll('.list-group')[0].classList.toggle('show');
+          document.querySelectorAll('.list-group')[0].style.display = 'none';
       })
+
+    //  document.querySelector('#test-btn').addEventListener('click', function() {
+    //       document.querySelectorAll('.hello')[0].style.display = 'none';
+    //       document.querySelectorAll('.hello')[1].style.display = 'none';
+    //       document.querySelectorAll('.hello')[2].style.display = 'none';
+        
+    //  })
+     $('#test-btn').on('click', function() {
+      //$('.hello').css('display', 'none');
+      //$('.hello').hide()
+      //$('.hello').fadeOut()
+      $('.hello').slideUp()
+     })
+
+     $('#test-btn2').on('click', function() {
+      //$('.hello').show()
+      //$('.hello').fadeIn()
+      $('.hello').slideDown()
+     })
       
     </script>
 
