@@ -41,7 +41,7 @@
                 <input type = "password" class ="form-control" id="pw_text">
             </div>
             <button type = "submit" class="btn btn-primary" id = "send">전송</button>
-            <button type = "button" class="btn btn-danger" id ="close">닫기</button>
+            <button type = "button" class="btn btn-danger" id = "close">닫기</button>
 
            </form>
 
@@ -107,14 +107,32 @@
 
          //전송버튼을 누르면 만약 id_txt에 입력된 값이 없거나,
         //pw_txt 길이가 6미만이면 alert("아이디나 패스워드를 확안하세요")
-        $('#send').on('click', function(e){
-            if(($('#id_txt').val() == '') |
-                ($('#pw_txt').val().length < 6)){
-                alert("아이디나 패스워드를 확인하세요")
-                e.preventDefault(); //폼전송 막음
-            }
+        // $('#send').on('click', function(e){
+        //     if(($('#id_txt').val() == '') |
+        //         ($('#pw_txt').val().length < 6)){
+        //         alert("아이디나 패스워드를 확인하세요")
+        //         e.preventDefault(); //폼전송 막음
+        //     }
 
-        });
+        // });
+
+        $('#send').on('click', function(e){
+            var id_input = document.getElementById('id_txt').value;
+            var pw_input = document.getElementById('pw_txt').value;
+            if(id_input == ''){
+                alert("아이디를 입력하세요")
+                e.preventDefault();
+            }
+            if(id_input == ''){
+                alert("이메일형식이 아닙니다");
+                e.preventDefault()
+            }
+            if(pw_input == ''){
+                alert("비밀번호 형식에 맞지 않습니다");
+                e.preventDefault()
+            }
+               
+        })
 
         // 로그인창에서 닫기를 누르면 로그인창이 닫아지도록 해 보세요
 
