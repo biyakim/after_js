@@ -103,7 +103,7 @@
     </div>
 
     <div class ="alert alert-danger">
-        <span id="num"></span>초이내 구매시 사은품 증정!
+        <span id="num">5</span>초이내 구매시 사은품 증정!
     </div>
 
     <script>   
@@ -126,6 +126,8 @@
                 document.querySelector('#num').innerHTML = count;
             }
         },1000)
+    
+        setTimeout(function(){$('.alert').hide();},5200)
 
    </script>    
 
