@@ -88,6 +88,9 @@
 
       document.querySelectorAll('.card-body h5')[2].innerHTML = products[2].title
       document.querySelectorAll('.card-body p')[2].innerHTML = "가격 : " + products[2].price
+
+      $('.card-body h5').eq(2).HTML(products[2].title);
+      $('.card-body p').eq(2).HTML("가격 : " + products[2].price);
   </script>
   </body>
 
